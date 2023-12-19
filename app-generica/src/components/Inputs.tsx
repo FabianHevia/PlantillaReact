@@ -14,7 +14,7 @@ interface Props {
   return (
       <div>
         <label className="form-label">{tituloRecibido}</label>
-        <input type={tipoRecibido} className="form-control" id={idRecibido}/>
+        <input type={tipoRecibido} className="form-control mb-2" id={idRecibido}/>
       </div>
   );
 }
