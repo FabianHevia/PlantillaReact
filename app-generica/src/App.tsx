@@ -1,5 +1,6 @@
 import React from 'react';
 import Inputs from './components/Inputs';
+import BGanimated from './components/animatedBackground';
 
 function App() {
   const primerNombre = "First Name"; const tipoTexto = "text"; const idPrimerNombre = "FN";
@@ -11,9 +12,9 @@ function App() {
         <div className="container">
         <div className="row">
           <div className="col-8">
-            <div className="container position-relative top-50 rounded-start-3" style={{ backgroundColor: 'purple', height:'150%',marginTop:'-10%' }}>
-              <h1 className="text-center">Aquí va un waves css</h1>
-            </div>
+            <div className="container position-relative top-50" style={{ marginTop:'-10%', height:'160%' }}>
+              <BGanimated />
+             </div>
           </div>
           <div className="col-4">
             <div className="container position-relative top-50" style={{ maxWidth: '80%' }}>
