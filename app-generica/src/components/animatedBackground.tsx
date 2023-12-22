@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import './animatedCSS.css'; // Importa tu archivo CSS
 
 const BGanimated: React.FC = () => {
   const [posX, setPosX] = useState(0);
@@ -25,25 +24,23 @@ const BGanimated: React.FC = () => {
 
   const containerStyle: React.CSSProperties = {
     height: '100%',
-    width: '100%', // Ocupar todo el ancho disponible
+    width: '100%',
     backgroundImage: `
-      linear-gradient(115deg, rgb(211, 255, 215), rgb(0, 0, 0)),
-      radial-gradient(90% 100% at calc(50% + ${posX}px) calc(0% + ${posY}px), rgb(200, 200, 200), rgb(22, 0, 45)),
-      radial-gradient(100% 100% at calc(80% - ${posX}px) calc(0% - ${posY}px), rgb(250, 255, 0), rgb(36, 0, 0)),
-      radial-gradient(150% 210% at calc(100% + ${posX}px) calc(0% + ${posY}px), rgb(20, 175, 125), rgb(0, 10, 255)),
-      radial-gradient(100% 100% at calc(100% - ${posX}px) calc(30% - ${posY}px), rgb(255, 77, 0), rgb(0, 200, 255)),
-      linear-gradient(60deg, rgb(255, 0, 0), rgb(120, 86, 255))
+      linear-gradient(115deg, #223858, #17243a),
+      radial-gradient(90% 100% at calc(50% + ${posX}px) calc(0% + ${posY}px), #3163a5,  #c9d9ee),
+      radial-gradient(100% 100% at calc(80% - ${posX}px) calc(0% - ${posY}px), #223858,  #c9d9ee),
+      radial-gradient(150% 210% at calc(100% + ${posX}px) calc(0% + ${posY}px), #c9d9ee, #17243a),
+      radial-gradient(100% 100% at calc(100% - ${posX}px) calc(30% - ${posY}px), #223858, #c9d9ee),
+      linear-gradient(60deg, #17243a, #223858)
     `,
-    backgroundBlendMode: 'overlay, overlay, difference, difference, difference, normal', // Corregir nombre de propiedad y uso de comillas
+    backgroundBlendMode: 'overlay, overlay, difference, difference, difference, normal',
     position: 'relative'
   };
 
   return (
     <div id="customDiv" className="container customDiv rounded-start-3" style={containerStyle}>
-      {/* Contenido del componente */}
     </div>
   );
 };
 
 export default BGanimated;
-
